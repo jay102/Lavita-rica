@@ -7,57 +7,190 @@
     tools:context="com.lavita_rica.RegisterActivity">
 
 
+    <RelativeLayout
+        android:id="@+id/relLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/relLayoutTopbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical">
+
+            <android.support.design.widget.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary">
+
+                <android.support.v7.widget.Toolbar
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="@string/register"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+                </android.support.v7.widget.Toolbar>
+
+            </android.support.design.widget.AppBarLayout>
+
+        </LinearLayout>
+
 
         <RelativeLayout
-            android:id="@+id/relLayout"
+            android:id="@+id/relLayoutMiddle"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_below="@+id/relLayoutTopbar"
+            android:background="@color/colorBackground">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
             <LinearLayout
-                android:id="@+id/relLayoutTopbar"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:orientation="vertical">
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="16dp">
 
-                <android.support.design.widget.AppBarLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_weight="1"
-                    android:background="@color/colorPrimary">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="Payer Details"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="10dp"
+                    android:textAllCaps="true"/>
 
-                    <android.support.v7.widget.Toolbar
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:fontFamily="cursive"
-                            android:text="@string/register"
-                            android:textColor="@color/colorWhite"
-                            android:textSize="22sp"
-                            android:textStyle="bold" />
-                    </android.support.v7.widget.Toolbar>
+                <EditText
+                    android:id="@+id/username"
+                    android:layout_width="350dp"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/background"
+                    android:ems="8"
+                    android:inputType="textPersonName"
+                    android:hint="Payers Username"/>
 
-                </android.support.design.widget.AppBarLayout>
+                <EditText
+                    android:layout_width="350dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/background"
+                    android:ems="8"
+                    android:inputType="textPassword"
+                    android:id="@+id/transact_password"
+                    android:hint="Transaction Password"
+                    android:layout_marginBottom="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="Personal Details"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textAllCaps="true"
+                    />
+
+
+                <EditText
+                    android:id="@+id/fname"
+                    android:layout_width="350dp"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/background"
+                    android:ems="8"
+                    android:inputType="textPersonName"
+                    android:hint="First Name"/>
+
+                <EditText
+                    android:layout_width="350dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/background"
+                    android:ems="8"
+                    android:inputType="textPersonName"
+                    android:id="@+id/middle_name"
+                    android:hint="Midlle Name"
+                    android:layout_marginBottom="20dp"/>
+                <EditText
+                    android:layout_width="350dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/background"
+                    android:ems="8"
+                    android:inputType="textPersonName"
+                    android:id="@+id/last_name"
+                    android:hint="Last Name"
+                    android:layout_marginBottom="20dp"/>
+                <EditText
+                    android:layout_width="350dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/background"
+                    android:ems="11"
+                    android:inputType="phone"
+                    android:id="@+id/phone_number"
+                    android:hint="Phone Number"
+                    android:layout_marginBottom="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="Location"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textAllCaps="true"
+                    />
+
+                <Spinner
+                    android:id="@+id/countries"
+                    android:layout_width="350dp"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/background"
+                    android:inputType="textPersonName"
+                   />
+                <EditText
+                    android:layout_width="350dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/background"
+                    android:ems="25"
+                    android:inputType="textMultiLine"
+                    android:id="@+id/residence_address"
+                    android:hint="Residential Address"
+                    android:layout_marginBottom="20dp"/>
+                <EditText
+                    android:layout_width="350dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/background"
+                    android:ems="4"
+                    android:inputType="number"
+                    android:id="@+id/zip_code"
+                    android:hint="Zip"
+                    android:layout_marginBottom="20dp"/>
 
             </LinearLayout>
 
-
-            <RelativeLayout
-                android:id="@+id/relLayoutMiddle"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_below="@+id/relLayoutTopbar"
-                android:background="@color/colorBackground">
-
-
-            </RelativeLayout>
-
-
+            </ScrollView>
         </RelativeLayout>
+
+
+    </RelativeLayout>
 
 
 </android.support.design.widget.CoordinatorLayout>
